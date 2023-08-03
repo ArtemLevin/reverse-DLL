@@ -36,14 +36,12 @@ class dList {
         Node leftSide = head;
         Node rightSide = tail;
         Node tempNode = new Node();
-        int counter = 0;
         while(leftSide.prev != rightSide) {
             tempNode.value = rightSide.value;
             rightSide.value = leftSide.value;
             leftSide.value = tempNode.value;
             leftSide = leftSide.next;
             rightSide = rightSide.prev;
-            counter ++;
         }
 
     }
